@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Songs" />
+        <activity android:name=".NowPlaying" />
+        <activity android:name=".SongDetail"></activity>
     </application>
 
 </manifest>
