@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menuTextPaddingHorizontal">122dp</dimen>
+    <dimen name="menuTextPaddingTop">20dp</dimen>
+    <dimen name="menuTextSize">30sp</dimen>
+    <dimen name="menuLayoutHeight">88dp</dimen>
+    <dimen name="menuMargin">11dp</dimen>
+    <dimen name="listItemImageWidth">80dp</dimen>
+    <dimen name="listItemImageHeight">53dp</dimen>
+    <dimen name="listItemSubLayoutMargin">8dp</dimen>
+    <dimen name="listItemSongNameTextSize">13sp</dimen>
+    <dimen name="listItemPlayControls">20dp</dimen>
+    <dimen name="nowPlayingImageMarginTop">100dp</dimen>
+    <dimen name="infoImageMargin">20dp</dimen>
+    <dimen name="infoSongTextSize">12sp</dimen>
+    <dimen name="nowPlayingSongArtistSize">10sp</dimen>
+    <dimen name="nowPlayingSongSize">20sp</dimen>
+</resources>

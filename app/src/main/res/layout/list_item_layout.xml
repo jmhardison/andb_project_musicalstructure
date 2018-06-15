@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listItemLayout">
+
+    <ImageView
+        android:id="@+id/itemSongAlbumArt"
+        style="@style/listItemImage" />
+
+    <LinearLayout style="@style/listItemSubLayout">
+
+        <TextView
+            android:id="@+id/itemSongName"
+            android:text="SongName"
+            style="@style/listItemSongName"
+            />
+
+        <TextView
+            android:id="@+id/itemSongArtist"
+            android:text="SongArtist"
+            style="@style/listItemSongArtist" />
+    </LinearLayout>
+    <RelativeLayout style="@style/listItemSubRelativeLayout">
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:src="@android:drawable/ic_media_play"
+            style="@style/listItemPlayControl" />
+        <ImageView
+            android:id="@+id/btnInfo"
+            android:src="@android:drawable/ic_dialog_info"
+            style="@style/listItemInfoControls" />
+    </RelativeLayout>
+
+</LinearLayout>

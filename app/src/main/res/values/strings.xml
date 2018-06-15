@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">andb_project_musicalstructure</string>
+    <string name="app_name">Musical Structure</string>
+    <string name="song_activity_name">Songs</string>
+    <string name="radio_activity_name">Radio</string>
+    <string name="nowplaying_activity_name">Now Playing</string>
+    <string name="menuItemSongsText">Songs</string>
+    <string name="menuItemRadioText">Radio</string>
 </resources>

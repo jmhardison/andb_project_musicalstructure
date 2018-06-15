@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context=".NowPlaying">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/tvNowPlayingAlbumArt"
+        android:src="@drawable/cemeterybytheroadlicensecc0publicdomain"
+        style="@style/nowPlayingImage" />
+
+    <LinearLayout
+        android:layout_margin="@dimen/menuMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tvNowPlayingSongName"
+            android:text="TESTSONG"
+            style="@style/nowPlayingSong" />
+        <TextView
+            android:id="@+id/tvNowPlayingSongArtist"
+            android:text="TESTARTIST"
+            style="@style/nowPlayingArtist" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/nowPlayingControlsLayout">
+
+        <ImageView
+            android:id="@+id/bNowPlayingPlay"
+            android:src="@android:drawable/ic_media_play"
+            style="@style/nowPlayingPlay" />
+        <ImageView
+            style="@style/nowPlayingPlay"
+            android:id="@+id/bNowPlayingPause"
+            android:src="@android:drawable/ic_media_pause"/>
+
+    </LinearLayout>
+</LinearLayout>
