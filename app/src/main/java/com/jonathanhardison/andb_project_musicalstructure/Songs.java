@@ -19,16 +19,11 @@ public class Songs extends AppCompatActivity {
         //instantiate songs with some images.
         ArrayList<SongDataType> listOfSongs = new ArrayList<SongDataType>();
 
-        listOfSongs.add(new SongDataType("I Want To Destroy Something Beautiful", "Josh Woodward", "Easy Listening",
-                getResources().getIdentifier("cemeterybytheroadlicensecc0publicdomain", "drawable", getPackageName())));
-        listOfSongs.add(new SongDataType("Swan Song", "Paper Navy", "Country",
-                getResources().getIdentifier("cutepuppy13685720501crlicensecc0publicdomain", "drawable", getPackageName())));
-        listOfSongs.add(new SongDataType("Bust This Bust That", "Professor Kliq", "Electronic",
-                getResources().getIdentifier("frenchbulldogpuppyportrait1509041878usplicensecc0publicdomain", "drawable", getPackageName())));
-        listOfSongs.add(new SongDataType("These Days", "Robin Grey", "Easy Listening",
-                getResources().getIdentifier("spanishguitarlicensecc0publicdomain", "drawable", getPackageName())));
-        listOfSongs.add(new SongDataType("Trail", "Nobara Hayakawa", "Electronic",
-                getResources().getIdentifier("spanishguitarlicensecc0publicdomain", "drawable", getPackageName())));
+        listOfSongs.add(new SongDataType("I Want To Destroy Something Beautiful", "Josh Woodward", "Easy Listening", R.drawable.cemeterybytheroadlicensecc0publicdomain));
+        listOfSongs.add(new SongDataType("Swan Song", "Paper Navy", "Country", R.drawable.cutepuppy13685720501crlicensecc0publicdomain));
+        listOfSongs.add(new SongDataType("Bust This Bust That", "Professor Kliq", "Electronic", R.drawable.frenchbulldogpuppyportrait1509041878usplicensecc0publicdomain));
+        listOfSongs.add(new SongDataType("These Days", "Robin Grey", "Easy Listening", R.drawable.spanishguitarlicensecc0publicdomain));
+        listOfSongs.add(new SongDataType("Trail", "Nobara Hayakawa", "Electronic", R.drawable.spanishguitarlicensecc0publicdomain));
 
         //put into the adapter
         SongAdapter adapter = new SongAdapter(this, listOfSongs);
