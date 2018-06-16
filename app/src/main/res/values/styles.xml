@@ -85,8 +85,8 @@
     </style>
 
     <style name="infoSongImage">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/listItemImageWidth</item>
+        <item name="android:layout_height">@dimen/listItemImageHeight</item>
         <item name="android:layout_gravity">top</item>
         <item name="android:layout_margin">@dimen/infoImageMargin</item>
     </style>
@@ -121,8 +121,8 @@
     </style>
 
     <style name="nowPlayingImage">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/nowPlayingImageWidth</item>
+        <item name="android:layout_height">@dimen/nowPlayingImageHeight</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginTop">@dimen/nowPlayingImageMarginTop</item>
     </style>

@@ -18,59 +18,78 @@ import java.util.ArrayList;
  */
 public class SongAdapter extends ArrayAdapter<SongDataType> {
 
+    static class SongViewHolder {
+        //get views
+        private TextView tvSongName;
+        private TextView tvSongArtist;
+        private ImageView tvSongAlbumArt;
+        private ImageView bPlay;
+        private ImageView bInfo;
+    }
 
     public SongAdapter(Context context, ArrayList<SongDataType> songs){
         super(context, 0, songs);
     }
 
-
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View vListItem = convertView;
+        SongViewHolder holder;
 
         if(vListItem == null){
             vListItem = LayoutInflater.from(getContext()).inflate(R.layout.list_item_layout, parent, false);
+            holder = new SongViewHolder();
+            //get views
+            holder.tvSongName = vListItem.findViewById(R.id.itemSongName);
+            holder.tvSongArtist = vListItem.findViewById(R.id.itemSongArtist);
+            holder.tvSongAlbumArt = vListItem.findViewById(R.id.itemSongAlbumArt);
+            holder.bPlay = vListItem.findViewById(R.id.btnPlay);
+            holder.bInfo = vListItem.findViewById(R.id.btnInfo);
+        }
+        else{
+            holder = (SongViewHolder) convertView.getTag();
         }
 
         SongDataType currentSong = getItem(position);
 
-        //get views
-        TextView tvSongName = (TextView)vListItem.findViewById(R.id.itemSongName);
-        TextView tvSongArtist = (TextView)vListItem.findViewById(R.id.itemSongArtist);
-        ImageView tvSongAlbumArt = (ImageView)vListItem.findViewById(R.id.itemSongAlbumArt);
-        ImageView bPlay = (ImageView)vListItem.findViewById(R.id.btnPlay);
-        ImageView bInfo = (ImageView)vListItem.findViewById(R.id.btnInfo);
+
 
         //set view data from current song
-        tvSongName.setText(currentSong.getSongName());
-        tvSongArtist.setText(currentSong.getSongArtist());
-        tvSongAlbumArt.setImageResource(currentSong.getAlbumImage());
+        holder.tvSongName.setText(currentSong.getSongName());
+        holder.tvSongArtist.setText(currentSong.getSongArtist());
+        holder.tvSongAlbumArt.setImageResource(currentSong.getAlbumImage());
 
         final SongDataType infoCurrentSong = (SongDataType) getItem(position);
 
         //onclick setup
         //storing data about currently selected song in extra's for retrieval in the next activity.
-        bPlay.setOnClickListener(new OnClickListener() {
+        holder.bPlay.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), NowPlaying.class);
-                intent.putExtra("songname", infoCurrentSong.getSongName());
-                intent.putExtra("songartist", infoCurrentSong.getSongArtist());
-                intent.putExtra("songgenre", infoCurrentSong.getSongGenre());
-                intent.putExtra("songalbum", infoCurrentSong.getAlbumImage());
+                Intent intent = new Intent(getContext(), NowPlayingActivity.class);
+                intent.putExtra("songinfo", new SongDataType(
+                        infoCurrentSong.getSongName(),
+                        infoCurrentSong.getSongArtist(),
+                        infoCurrentSong.getSongGenre(),
+                        infoCurrentSong.getAlbumImage()
+                        ));
+
                 getContext().startActivity(intent);
             }
         });
 
-        bInfo.setOnClickListener(new OnClickListener() {
+        holder.bInfo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), SongDetail.class);
-                intent.putExtra("songname", infoCurrentSong.getSongName());
-                intent.putExtra("songartist", infoCurrentSong.getSongArtist());
-                intent.putExtra("songgenre", infoCurrentSong.getSongGenre());
-                intent.putExtra("songalbum", infoCurrentSong.getAlbumImage());
+                Intent intent = new Intent(getContext(), SongDetailActivity.class);
+                intent.putExtra("songinfo", new SongDataType(
+                        infoCurrentSong.getSongName(),
+                        infoCurrentSong.getSongArtist(),
+                        infoCurrentSong.getSongGenre(),
+                        infoCurrentSong.getAlbumImage()
+                ));
+
                 getContext().startActivity(intent);
             }
         });

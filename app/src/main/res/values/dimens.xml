@@ -10,9 +10,11 @@
     <dimen name="listItemSubLayoutMargin">8dp</dimen>
     <dimen name="listItemSongNameTextSize">13sp</dimen>
     <dimen name="listItemPlayControls">20dp</dimen>
-    <dimen name="nowPlayingImageMarginTop">100dp</dimen>
+    <dimen name="nowPlayingImageMarginTop">20dp</dimen>
     <dimen name="infoImageMargin">20dp</dimen>
     <dimen name="infoSongTextSize">12sp</dimen>
     <dimen name="nowPlayingSongArtistSize">10sp</dimen>
     <dimen name="nowPlayingSongSize">20sp</dimen>
+    <dimen name="nowPlayingImageWidth">200dp</dimen>
+    <dimen name="nowPlayingImageHeight">160dp</dimen>
 </resources>

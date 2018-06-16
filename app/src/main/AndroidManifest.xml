@@ -17,12 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Songs"
+            android:name=".SongsActivity"
             android:label="@string/song_activity_name" />
         <activity
-            android:name=".NowPlaying"
+            android:name=".NowPlayingActivity"
             android:label="@string/nowplaying_activity_name" />
-        <activity android:name=".SongDetail"
+        <activity android:name=".SongDetailActivity"
             android:label="Info"></activity>
     </application>
 

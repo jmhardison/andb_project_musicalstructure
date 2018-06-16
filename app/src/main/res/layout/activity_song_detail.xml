@@ -4,36 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_gravity="top"
-    tools:context=".SongDetail">
+    tools:context=".SongDetailActivity">
 
-
-    <ImageView
-        android:id="@+id/tvNowPlayingAlbumArt"
-        android:src="@drawable/cemeterybytheroadlicensecc0publicdomain"
-        style="@style/infoSongImage" />
 
     <LinearLayout
-        android:layout_margin="@dimen/menuMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tvInfoAlbumArt"
+            android:src="@drawable/cemeterybytheroadlicensecc0publicdomain"
+            style="@style/infoSongImage" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/menuMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top">
+            <TextView
+                style="@style/infoSongSubDetails"
+                android:id="@+id/tvInfoSongName"
+                android:text="TESTSONG"
+                />
+            <TextView
+                android:id="@+id/tvInfoArtist"
+                android:text="TESTARTIST"
+                style="@style/infoSongSubDetails" />
+            <TextView
+                style="@style/infoSongSubDetails"
+                android:id="@+id/tvInfoGenre"
+                android:text="TESTGENRE"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="top">
-        <TextView
-            style="@style/infoSongSubDetails"
-            android:id="@+id/tvNowPlayingSongName"
-            android:text="TESTSONG"
-            />
-        <TextView
-            android:id="@+id/tvNowPlayingSongArtist"
-            android:text="TESTARTIST"
-            style="@style/infoSongSubDetails" />
-        <TextView
-            style="@style/infoSongSubDetails"
-            android:id="@+id/tvNowPlayingGenre"
-            android:text="TESTGENRE"
-            />
-    </LinearLayout>
-
+        android:layout_gravity="center_horizontal"
+        android:text="Songs"
+        android:id="@+id/infoReturn"/>
 </LinearLayout>

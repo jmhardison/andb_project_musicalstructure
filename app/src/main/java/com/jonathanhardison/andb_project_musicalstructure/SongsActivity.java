@@ -1,15 +1,12 @@
 package com.jonathanhardison.andb_project_musicalstructure;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Songs extends AppCompatActivity {
+public class SongsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +26,7 @@ public class Songs extends AppCompatActivity {
         SongAdapter adapter = new SongAdapter(this, listOfSongs);
 
         //attach to view
-        ListView listViewSongs = (ListView) findViewById(R.id.lvSongs);
+        ListView listViewSongs = findViewById(R.id.lvSongs);
         listViewSongs.setAdapter(adapter);
 
     }
